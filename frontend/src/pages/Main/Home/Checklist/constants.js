@@ -41,9 +41,15 @@ const t = (key) => i18next.t(key);
 export const CHECKLIST_ITEMS = [
   {
     id: "create_workspace",
-    get title() { return t('checklist.items.create_workspace.title') },
-    get description() { return t('checklist.items.create_workspace.description') },
-    get action() { return t('checklist.items.create_workspace.action') },
+    get title() {
+      return t("checklist.items.create_workspace.title");
+    },
+    get description() {
+      return t("checklist.items.create_workspace.description");
+    },
+    get action() {
+      return t("checklist.items.create_workspace.action");
+    },
     handler: ({ showNewWsModal = noop }) => {
       showNewWsModal();
       return true;
@@ -52,9 +58,15 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "send_chat",
-    get title() { return t('checklist.items.send_chat.title') },
-    get description() { return t('checklist.items.send_chat.description') },
-    get action() { return t('checklist.items.send_chat.action') },
+    get title() {
+      return t("checklist.items.send_chat.title");
+    },
+    get description() {
+      return t("checklist.items.send_chat.description");
+    },
+    get action() {
+      return t("checklist.items.send_chat.action");
+    },
     handler: ({
       workspaces = [],
       navigate = noop,
@@ -62,11 +74,9 @@ export const CHECKLIST_ITEMS = [
       showNewWsModal = noop,
     }) => {
       if (workspaces.length === 0) {
-        showToast(
-          t('checklist.items.send_chat.error'),
-          "warning",
-          { clear: true }
-        );
+        showToast(t("checklist.items.send_chat.error"), "warning", {
+          clear: true,
+        });
         showNewWsModal();
         return false;
       }
@@ -77,9 +87,15 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "embed_document",
-    get title() { return t('checklist.items.embed_document.title') },
-    get description() { return t('checklist.items.embed_document.description') },
-    get action() { return t('checklist.items.embed_document.action') },
+    get title() {
+      return t("checklist.items.embed_document.title");
+    },
+    get description() {
+      return t("checklist.items.embed_document.description");
+    },
+    get action() {
+      return t("checklist.items.embed_document.action");
+    },
     handler: ({
       workspaces = [],
       setSelectedWorkspace = noop,
@@ -88,11 +104,9 @@ export const CHECKLIST_ITEMS = [
       showNewWsModal = noop,
     }) => {
       if (workspaces.length === 0) {
-        showToast(
-          t('checklist.items.embed_document.error'),
-          "warning",
-          { clear: true }
-        );
+        showToast(t("checklist.items.embed_document.error"), "warning", {
+          clear: true,
+        });
         showNewWsModal();
         return false;
       }
@@ -104,9 +118,15 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "setup_system_prompt",
-    get title() { return t('checklist.items.setup_system_prompt.title') },
-    get description() { return t('checklist.items.setup_system_prompt.description') },
-    get action() { return t('checklist.items.setup_system_prompt.action') },
+    get title() {
+      return t("checklist.items.setup_system_prompt.title");
+    },
+    get description() {
+      return t("checklist.items.setup_system_prompt.description");
+    },
+    get action() {
+      return t("checklist.items.setup_system_prompt.action");
+    },
     handler: ({
       workspaces = [],
       navigate = noop,
@@ -114,11 +134,9 @@ export const CHECKLIST_ITEMS = [
       showToast = noop,
     }) => {
       if (workspaces.length === 0) {
-        showToast(
-          t('checklist.items.setup_system_prompt.error'),
-          "warning",
-          { clear: true }
-        );
+        showToast(t("checklist.items.setup_system_prompt.error"), "warning", {
+          clear: true,
+        });
         showNewWsModal();
         return false;
       }
@@ -133,9 +151,15 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "define_slash_command",
-    get title() { return t('checklist.items.define_slash_command.title') },
-    get description() { return t('checklist.items.define_slash_command.description') },
-    get action() { return t('checklist.items.define_slash_command.action') },
+    get title() {
+      return t("checklist.items.define_slash_command.title");
+    },
+    get description() {
+      return t("checklist.items.define_slash_command.description");
+    },
+    get action() {
+      return t("checklist.items.define_slash_command.action");
+    },
     handler: ({
       workspaces = [],
       navigate = noop,
@@ -143,11 +167,9 @@ export const CHECKLIST_ITEMS = [
       showToast = noop,
     }) => {
       if (workspaces.length === 0) {
-        showToast(
-          t('checklist.items.define_slash_command.error'),
-          "warning",
-          { clear: true }
-        );
+        showToast(t("checklist.items.define_slash_command.error"), "warning", {
+          clear: true,
+        });
         showNewWsModal();
         return false;
       }
@@ -162,9 +184,15 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "visit_community",
-    get title() { return t('checklist.items.visit_community.title') },
-    get description() { return t('checklist.items.visit_community.description') },
-    get action() { return t('checklist.items.visit_community.action') },
+    get title() {
+      return t("checklist.items.visit_community.title");
+    },
+    get description() {
+      return t("checklist.items.visit_community.description");
+    },
+    get action() {
+      return t("checklist.items.visit_community.action");
+    },
     handler: () => window.open(paths.communityHub.website(), "_blank"),
     icon: UsersThree,
   },

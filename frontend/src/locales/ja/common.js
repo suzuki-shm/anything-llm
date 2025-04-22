@@ -768,8 +768,10 @@ const TRANSLATIONS = {
     send_chat: "チャットを送信",
     embed_document: "ドキュメントを埋め込む",
     create_workspace: "ワークスペースを作成",
-    create_workspace_chat_warning: "チャットを開始する前にワークスペースを作成してください。",
-    create_workspace_embed_warning: "ドキュメントを埋め込む前にワークスペースを作成してください。"
+    create_workspace_chat_warning:
+      "チャットを開始する前にワークスペースを作成してください。",
+    create_workspace_embed_warning:
+      "ドキュメントを埋め込む前にワークスペースを作成してください。",
   },
   checklist: {
     title: "はじめましょう",
@@ -780,38 +782,40 @@ const TRANSLATIONS = {
       create_workspace: {
         title: "ワークスペースを作成",
         description: "最初のワークスペースを作成して始めましょう",
-        action: "作成"
+        action: "作成",
       },
       send_chat: {
         title: "チャットを送信",
         description: "AIアシスタントとの会話を開始する",
         action: "チャット",
-        error: "チャットを開始する前にワークスペースを作成してください。"
+        error: "チャットを開始する前にワークスペースを作成してください。",
       },
       embed_document: {
         title: "ドキュメントを埋め込む",
         description: "最初のドキュメントをワークスペースに追加",
         action: "埋め込む",
-        error: "ドキュメントを埋め込む前にワークスペースを作成してください。"
+        error: "ドキュメントを埋め込む前にワークスペースを作成してください。",
       },
       setup_system_prompt: {
         title: "システムプロンプトを設定",
         description: "AIアシスタントの動作を設定する",
         action: "設定",
-        error: "システムプロンプトを設定する前にワークスペースを作成してください。"
+        error:
+          "システムプロンプトを設定する前にワークスペースを作成してください。",
       },
       define_slash_command: {
         title: "スラッシュコマンドを定義",
         description: "アシスタント用のカスタムコマンドを作成",
         action: "定義",
-        error: "スラッシュコマンドを設定する前にワークスペースを作成してください。"
+        error:
+          "スラッシュコマンドを設定する前にワークスペースを作成してください。",
       },
       visit_community: {
         title: "コミュニティハブを訪問",
         description: "コミュニティのリソースとテンプレートを探索",
-        action: "閲覧"
-      }
-    }
+        action: "閲覧",
+      },
+    },
   },
 };
 
