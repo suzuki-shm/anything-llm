@@ -763,6 +763,14 @@ const TRANSLATIONS = {
       },
     },
   },
+  quick_links: {
+    title: "クイックリンク",
+    send_chat: "チャットを送信",
+    embed_document: "ドキュメントを埋め込む",
+    create_workspace: "ワークスペースを作成",
+    create_workspace_chat_warning: "チャットを開始する前にワークスペースを作成してください。",
+    create_workspace_embed_warning: "ドキュメントを埋め込む前にワークスペースを作成してください。"
+  },
 };
 
 export default TRANSLATIONS;

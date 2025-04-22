@@ -823,6 +823,15 @@ const TRANSLATIONS = {
     theme: "Theme Preference",
     language: "Preferred language",
   },
+
+  quick_links: {
+    title: "Quick Links",
+    send_chat: "Send Chat",
+    embed_document: "Embed a Document",
+    create_workspace: "Create Workspace",
+    create_workspace_chat_warning: "Please create a workspace before starting a chat.",
+    create_workspace_embed_warning: "Please create a workspace before embedding documents."
+  },
 };
 
 export default TRANSLATIONS;
