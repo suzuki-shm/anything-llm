@@ -832,6 +832,49 @@ const TRANSLATIONS = {
     create_workspace_chat_warning: "Please create a workspace before starting a chat.",
     create_workspace_embed_warning: "Please create a workspace before embedding documents."
   },
+
+  checklist: {
+    title: "Getting Started",
+    tasks_left: "{{count}} tasks left",
+    close: "close",
+    completed_message: "You're on your way to becoming an AnythingLLM expert!",
+    items: {
+      create_workspace: {
+        title: "Create a workspace",
+        description: "Create your first workspace to get started",
+        action: "Create"
+      },
+      send_chat: {
+        title: "Send a chat",
+        description: "Start a conversation with your AI assistant",
+        action: "Chat",
+        error: "Please create a workspace before starting a chat."
+      },
+      embed_document: {
+        title: "Embed a document",
+        description: "Add your first document to your workspace",
+        action: "Embed",
+        error: "Please create a workspace before embedding documents."
+      },
+      setup_system_prompt: {
+        title: "Set up a system prompt",
+        description: "Configure your AI assistant's behavior",
+        action: "Set Up",
+        error: "Please create a workspace before setting up system prompts."
+      },
+      define_slash_command: {
+        title: "Define a slash command",
+        description: "Create custom commands for your assistant",
+        action: "Define",
+        error: "Please create a workspace before setting up slash commands."
+      },
+      visit_community: {
+        title: "Visit Community Hub",
+        description: "Explore community resources and templates",
+        action: "Browse"
+      }
+    }
+  },
 };
 
 export default TRANSLATIONS;

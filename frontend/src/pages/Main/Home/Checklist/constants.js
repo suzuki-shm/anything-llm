@@ -7,11 +7,15 @@ import {
 } from "@phosphor-icons/react";
 import SlashCommandIcon from "./ChecklistItem/icons/SlashCommand";
 import paths from "@/utils/paths";
+import i18next from "@/i18n";
+
 const noop = () => {};
 
 export const CHECKLIST_UPDATED_EVENT = "anythingllm_checklist_updated";
 export const CHECKLIST_STORAGE_KEY = "anythingllm_checklist_completed";
 export const CHECKLIST_HIDDEN = "anythingllm_checklist_dismissed";
+
+const t = (key) => i18next.t(key);
 
 /**
  * @typedef {Object} ChecklistItemHandlerParams
@@ -26,21 +30,20 @@ export const CHECKLIST_HIDDEN = "anythingllm_checklist_dismissed";
 /**
  * @typedef {Object} ChecklistItem
  * @property {string} id
- * @property {string} title
- * @property {string} description
- * @property {string} action
+ * @property {string} title - Translated title
+ * @property {string} description - Translated description
+ * @property {string} action - Translated action text
  * @property {(params: ChecklistItemHandlerParams) => boolean} handler
- * @property {string} icon
- * @property {boolean} completed
+ * @property {React.ComponentType} icon
  */
 
 /** @type {ChecklistItem[]} */
 export const CHECKLIST_ITEMS = [
   {
     id: "create_workspace",
-    title: "Create a workspace",
-    description: "Create your first workspace to get started",
-    action: "Create",
+    get title() { return t('checklist.items.create_workspace.title') },
+    get description() { return t('checklist.items.create_workspace.description') },
+    get action() { return t('checklist.items.create_workspace.action') },
     handler: ({ showNewWsModal = noop }) => {
       showNewWsModal();
       return true;
@@ -49,9 +52,9 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "send_chat",
-    title: "Send a chat",
-    description: "Start a conversation with your AI assistant",
-    action: "Chat",
+    get title() { return t('checklist.items.send_chat.title') },
+    get description() { return t('checklist.items.send_chat.description') },
+    get action() { return t('checklist.items.send_chat.action') },
     handler: ({
       workspaces = [],
       navigate = noop,
@@ -60,7 +63,7 @@ export const CHECKLIST_ITEMS = [
     }) => {
       if (workspaces.length === 0) {
         showToast(
-          "Please create a workspace before starting a chat.",
+          t('checklist.items.send_chat.error'),
           "warning",
           { clear: true }
         );
@@ -74,9 +77,9 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "embed_document",
-    title: "Embed a document",
-    description: "Add your first document to your workspace",
-    action: "Embed",
+    get title() { return t('checklist.items.embed_document.title') },
+    get description() { return t('checklist.items.embed_document.description') },
+    get action() { return t('checklist.items.embed_document.action') },
     handler: ({
       workspaces = [],
       setSelectedWorkspace = noop,
@@ -86,7 +89,7 @@ export const CHECKLIST_ITEMS = [
     }) => {
       if (workspaces.length === 0) {
         showToast(
-          "Please create a workspace before embedding documents.",
+          t('checklist.items.embed_document.error'),
           "warning",
           { clear: true }
         );
@@ -101,9 +104,9 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "setup_system_prompt",
-    title: "Set up a system prompt",
-    description: "Configure your AI assistant's behavior",
-    action: "Set Up",
+    get title() { return t('checklist.items.setup_system_prompt.title') },
+    get description() { return t('checklist.items.setup_system_prompt.description') },
+    get action() { return t('checklist.items.setup_system_prompt.action') },
     handler: ({
       workspaces = [],
       navigate = noop,
@@ -112,7 +115,7 @@ export const CHECKLIST_ITEMS = [
     }) => {
       if (workspaces.length === 0) {
         showToast(
-          "Please create a workspace before setting up system prompts.",
+          t('checklist.items.setup_system_prompt.error'),
           "warning",
           { clear: true }
         );
@@ -130,9 +133,9 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "define_slash_command",
-    title: "Define a slash command",
-    description: "Create custom commands for your assistant",
-    action: "Define",
+    get title() { return t('checklist.items.define_slash_command.title') },
+    get description() { return t('checklist.items.define_slash_command.description') },
+    get action() { return t('checklist.items.define_slash_command.action') },
     handler: ({
       workspaces = [],
       navigate = noop,
@@ -141,7 +144,7 @@ export const CHECKLIST_ITEMS = [
     }) => {
       if (workspaces.length === 0) {
         showToast(
-          "Please create a workspace before setting up slash commands.",
+          t('checklist.items.define_slash_command.error'),
           "warning",
           { clear: true }
         );
@@ -159,9 +162,9 @@ export const CHECKLIST_ITEMS = [
   },
   {
     id: "visit_community",
-    title: "Visit Community Hub",
-    description: "Explore community resources and templates",
-    action: "Browse",
+    get title() { return t('checklist.items.visit_community.title') },
+    get description() { return t('checklist.items.visit_community.description') },
+    get action() { return t('checklist.items.visit_community.action') },
     handler: () => window.open(paths.communityHub.website(), "_blank"),
     icon: UsersThree,
   },
